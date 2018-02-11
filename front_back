@@ -1,0 +1,34 @@
+Dim A As String = ""
+        Dim FirstA As String = ""
+        Dim LastA As String = ""
+        Dim B As String = ""
+        Dim FirstB As String = ""
+        Dim LastB As String = ""
+        Dim LegnthA As Integer = 0
+        Dim LegnthB As Integer = 0
+
+        Console.Write("Please enter first string: ")
+        A = Console.ReadLine
+        Console.Write("Please enter second string: ")
+        B = Console.ReadLine
+        LegnthA = Len(A)
+        LegnthB = Len(B)
+
+        If LegnthA Mod 2 = 0 Then
+            FirstA = Mid(A, 1, LegnthA / 2)
+            LastA = Mid(A, LegnthA / 2 + 1, LegnthA / 2)
+        Else
+            FirstA = Mid(A, 1, LegnthA / 2 + 0.5)
+            LastA = Mid(A, LegnthA / 2 + 1, LegnthA / 2 - 1)
+        End If
+
+        If LegnthB Mod 2 = 0 Then
+            FirstB = Mid(B, 1, LegnthB / 2)
+            LastB = Mid(B, LegnthB / 2 + 1, LegnthB / 2)
+        Else
+            FirstB = Mid(B, 1, LegnthB / 2 + 0.5)
+            LastB = Mid(B, LegnthB / 2 + 1, LegnthB / 2 - 1)
+        End If
+        Console.WriteLine(FirstA & FirstB & LastA & LastB)
+
+        Console.ReadKey()

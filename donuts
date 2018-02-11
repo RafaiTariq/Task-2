@@ -1,0 +1,18 @@
+ Dim S As String = ""
+        Dim Legnth As Integer = 0
+        Dim Final As String = ""
+        Dim First As String = ""
+        Dim Last As String = ""
+        Console.WriteLine("Please enter the string: ")
+        S = Console.ReadLine
+        Legnth = Len(S)
+        If Legnth < 2 Then
+            Final = ""
+        Else
+            First = Mid(S, 1, 2)
+            Legnth = Legnth - 1
+            Last = Mid(S, Legnth, 2)
+            Final = First & Last
+        End If
+        Console.WriteLine(Final)
+        Console.ReadKey()

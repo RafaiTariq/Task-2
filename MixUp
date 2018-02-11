@@ -1,0 +1,25 @@
+ Dim A As String = ""
+        Dim B As String = ""
+        Dim FirstA As String = ""
+        Dim FirstB As String = ""
+        Dim LastA As String = ""
+        Dim LastB As String = ""
+        Dim LegnthA As Integer = 0
+        Dim LegnthB As Integer = 0
+        Dim FinalA As String = ""
+        Dim FinalB As String = ""
+        Console.Write("Please enter the first string: ")
+        A = Console.ReadLine
+        Console.Write("Please enter the second string: ")
+        B = Console.ReadLine
+        LegnthA = Len(A) - 2
+        LegnthB = Len(B) - 2
+        FirstA = Mid(A, 1, 2)
+        LastA = Mid(A, 3, LegnthA)
+        FirstB = Mid(B, 1, 2)
+        LastB = Mid(B, 3, LegnthB)
+        FinalA = FirstB & LastA
+        FinalB = FirstA & LastB
+        Console.WriteLine(FinalA)
+        Console.WriteLine(FinalB)
+        Console.ReadKey()

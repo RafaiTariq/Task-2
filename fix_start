@@ -1,0 +1,21 @@
+        Dim S As String = ""
+        Dim MyChar As Char = ""
+        Dim Final As String = ""
+        Dim ThisChar As Char = ""
+        Dim Legnth As Integer = 0
+        Console.Write("Please enter the word: ")
+        S = Console.ReadLine
+        Legnth = Len(S)
+        MyChar = Mid(S, 1, 1)
+        Final = MyChar
+        For x = 2 To Legnth
+            ThisChar = Mid(S, x, 1)
+            If ThisChar = MyChar Then
+                ThisChar = "*"
+            End If
+            Final = Final & ThisChar
+
+        Next
+
+        Console.WriteLine(Final)
+        Console.ReadKey()

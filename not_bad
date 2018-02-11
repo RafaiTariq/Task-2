@@ -1,0 +1,25 @@
+ Dim S As String = ""
+        Dim N As String = "not"
+        Dim B As String = "bad"
+        Dim N1 As Integer = 0
+        Dim B1 As Integer = 0
+        Dim Legnth As Integer = 0
+        Dim MyChar As String = ""
+        Dim FinalS As String = ""
+        Console.WriteLine("Please enter the string:")
+        S = Console.ReadLine
+        Legnth = Len(S)
+        For x = 1 To Legnth
+            MyChar = Mid(S, x, 3)
+            If MyChar = N Then
+                N1 = x
+            ElseIf MyChar = B Then
+                B1 = x
+            End If
+
+
+        Next
+        Legnth = Legnth - B1
+        FinalS = Mid(S, 1, N1 - 1) & "good" & Mid(S, B1 + 3, Legnth)
+        Console.WriteLine(FinalS)
+        Console.ReadKey()
